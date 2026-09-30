@@ -1,0 +1,23 @@
+info:
+  name: Citas x Producto
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{baseUrl}}Documentos/Productos?FechaInicio=20260928&FechaFin=20261004"
+  params:
+    - name: FechaInicio
+      value: "20260928"
+      type: query
+    - name: FechaFin
+      value: "20261004"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

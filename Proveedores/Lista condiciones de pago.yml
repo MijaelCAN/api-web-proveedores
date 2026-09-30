@@ -1,0 +1,18 @@
+info:
+  name: Lista condiciones de pago
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{baseUrl}}Maestros/CondicionPago"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI3NTQiLCJydWMiOiI0MjEwNDEzOSIsImVtYWlsIjoibXNpbHZhbm9Abm9nYXNhLmNvbS5wZSIsImF2YXRhciI6IiIsImFjY291bnRfc3RhdHVzIjoiWSIsInJvbGUiOiJjb21wcmFzIiwicm9sZV90eXBlIjoiaW50ZXJuYWwiLCJub21icmUiOiJTSUxWQU5PIFZBU1FVRVogTUlHVUVMIEFOR0VMIiwibmJmIjoxNzkwNzEwMDA3LCJleHAiOjE3OTA3MTM2MDcsImlhdCI6MTc5MDcxMDAwN30.Kix1zI22PU9k9Wtcj7WbSMvX4SmVOjQRpxsaMHgHOIU
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

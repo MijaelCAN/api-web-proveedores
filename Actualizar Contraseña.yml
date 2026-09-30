@@ -1,0 +1,23 @@
+info:
+  name: Actualizar Contraseña
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}Login/Actualizar_Contrasenia"
+  body:
+    type: json
+    data: |-
+      {
+          "usuario": "20601098459",
+          "password": "Nogasa2025*",
+          "role_type": "provider"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

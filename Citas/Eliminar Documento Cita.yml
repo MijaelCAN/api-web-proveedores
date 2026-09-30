@@ -1,0 +1,16 @@
+info:
+  name: Eliminar Documento Cita
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}PackingList/Archivos/Eliminar"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

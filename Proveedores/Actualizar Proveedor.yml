@@ -1,0 +1,76 @@
+info:
+  name: Actualizar Proveedor
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}Proveedores?CardCode=B20601537452"
+  params:
+    - name: CardCode
+      value: B20601537452
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+          "codigo_sn": "B20601537452",
+          "nombre_sn": "INVERSIONES HOTELERAS EL SOL EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+          "ruc": "20601537452",
+          "tipo_persona": "TPJ",
+          "moneda": "##",
+          "telefono1": "0",
+          "telefono2": "",
+          "telefono_movil": "",
+          "correo": "",
+          "tipo_documento": "6",
+          "distrito": "",
+          "provincia": "",
+          "departamento": "",
+          "ubigeo": "",
+          "condicion_pago": "-1",
+          "direccion_sunat": "",
+          "resolucion_agente_retencion": "",
+          "resolucion_agente_percepcion": "",
+          "website": "",
+          "create_date": "14/09/2026",
+          "update_date": "14/09/2026",
+          "status_contributer": "",
+          "status_domicilio": "",
+          "agente_percepcion": "N",
+          "exo_percepcion": "N",
+          "agente_retencion": "N",
+          "good_contributor": "N",
+          "economi_activity_sunat": "",
+          "status": "Pendiente",
+          "approval_date": "",
+          "cover_image": "",
+          "avatar": "",
+          "general_manager": "",
+          "admin_manager": "",
+          "sales_manager": "",
+          "contactos": [],
+          "bancos": [],
+          "direcciones": [
+              {
+                  "cod_direccion": "0",
+                  "departamento": "",
+                  "direccion": "",
+                  "distrito": "",
+                  "nro_linea": "0",
+                  "provincia": "",
+                  "ubigeo": ""
+              }
+          ],
+          "documento_evaluacion": [],
+          "referencias_comerciales": [],
+          "ServiciosOfrecidos": []
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

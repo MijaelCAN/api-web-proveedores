@@ -1,0 +1,4 @@
+name: prod - publico
+variables:
+  - name: baseUrl
+    value: http://190.12.79.132:8046/api/
