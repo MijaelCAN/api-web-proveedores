@@ -6,6 +6,15 @@ info:
 http:
   method: POST
   url: "{{baseUrl}}PackingList/Archivos/Eliminar"
+  body:
+    type: json
+    data: |-
+      {
+          "document_doc_entry": "1234",
+          "cod_cita": "567",
+          "usuario": "20123456789",
+          "motivo": "Se cargó la factura equivocada"
+      }
   auth: inherit
 
 settings:

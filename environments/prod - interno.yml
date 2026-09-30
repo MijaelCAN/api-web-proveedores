@@ -2,3 +2,5 @@ name: prod - interno
 variables:
   - name: baseUrl
     value: http://192.168.254.27:8046/api/
+  - name: num_cita
+    value: "13"

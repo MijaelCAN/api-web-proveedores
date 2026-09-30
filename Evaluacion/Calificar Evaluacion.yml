@@ -1,0 +1,33 @@
+info:
+  name: Calificar Evaluacion
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}Evaluacion/EvaluacionCita?codCita={{num_cita}}"
+  params:
+    - name: codCita
+      value: "{{num_cita}}"
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+          "criterios": [
+              {
+                  "criterio_codigo": "PUNTUALIDAD",
+                  "calificacion": 10,
+                  "comentario": "todo conforme pruebas - editado 2",
+                  "archivo_base64": ""
+              }
+          ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
