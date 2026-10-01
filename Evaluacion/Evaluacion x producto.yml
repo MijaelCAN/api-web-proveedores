@@ -1,0 +1,34 @@
+info:
+  name: Evaluacion x producto
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}Evaluacion/Productos "
+  body:
+    type: json
+    data: |
+      {
+        "area": "CALIDAD",
+        "usuario": "U001",
+        "lineas": [
+          {
+            "document": 123,
+            "line_number": 1,
+            "item_code": "PT000123",
+            "estado": "PARCIAL",
+            "cantidad_aceptada": 80,
+            "cantidad_rechazada": 20,
+            "motivo": "Envases dañados"
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
