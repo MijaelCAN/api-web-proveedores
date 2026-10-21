@@ -1,0 +1,35 @@
+info:
+  name: Respuesta reclamo - NUEVO
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}Reclamos/8/Respuesta"
+  body:
+    type: json
+    data: |-
+      {
+        "respuesta_inmediata": {
+          "fecha_respuesta": "2026-10-12T08:14:00-05:00",
+          "responsable": "INDUSTRIAS DEL ENVASE - EDITADO",
+          "respuesta": "PROCEDEMOS A REVISAR LOS LOTES MENCIONADOS"
+        },
+        "evaluacion_reclamo": {
+          "fecha_evaluacion": "2026-10-13T08:14:00-05:00",
+          "evaluado_por": "Mijael CANO ROJAS",
+          "reclamo_procede": "SI",
+          "descripcion": "Se valido el correo - EDITADO"
+        },
+        "plan_acciones": [
+          { "line_id": 1, "accion": "NUEVA ACCION REALIZADA - CERRADO", "fecha": "2025-10-10T08:14:00-05:00", "estado": "ABIERTO", "verificado_por": "CARLOS ALCANTARA", "fecha_verificacion": "2025-10-11T08:14:00-05:00" }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

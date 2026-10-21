@@ -1,0 +1,70 @@
+info:
+  name: Actualizar registro - NUEVO
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}Reclamos?DocEntry=9"
+  params:
+    - name: DocEntry
+      value: "9"
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "numero_reclamo": "REC-000003",
+        "cod_cita": "15",
+        "ruc_proveedor": "20100004322",
+        "razon_social": "INDUSTRIAS DEL ENVASE",
+        "fecha_reclamo": "2026-10-07T09:03:00-05:00",
+        "area_emite": "ASEG DE CALIDAD",
+        "responsable": "EDITH CHUMBILE - CANO",
+        "estado": "ABIERTO",
+        "cabecera": {
+          "n_lote": "190927",
+          "orden_compra": "261002534",
+          "factura": "FAC-000126",
+          "fecha_arribo": "2026-09-25"
+        },
+        "datos_registro_inspeccion": "La inspección fue realizada en base a la tabla MIL STD 105D. ",
+        "motivo_reclamo": "Se observan pelusa fuera del envase, cabello dentro del envase y rayon en a cavidad #2",
+        "impacto": "Esta condición puede contaminar el producto y generar un alto riesgo de rechazo del lote en el mercado.",
+        "productos": [
+          {
+            "doc_entry_packing_list": "888888889999",
+            "línea_packing_list": "2",
+            "codigo_articulo": "ACEITE OIL - VERDE EDITADO",
+            "descripcion_articulo": "ENVASE PEADS COLOR BLANCO SOPLADO C/ASA DE 5 L",
+            "cantidad_rechazada": "1366",
+            "motivo": "Se encontraron los envases aplastados, MOJADOS  "
+          }
+        ],
+        "adjuntos": [
+        {
+          "line_id": 1,
+          "nombre_archivo": "evidencia.jpg",
+          "base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAgACADASIAAhEBAxEB/8QAGgABAAEFAAAAAAAAAAAAAAAAAAECBAUGB//EACYQAAECBAUEAwAAAAAAAAAAAAEAAgMFETEEBiFRYRITFEEjcfD/xAAYAQADAQEAAAAAAAAAAAAAAAAABQYEB//EACERAAEDAwQDAAAAAAAAAAAAAAEAAgQREjEDBSFBIoHw/9oADAMBAAIRAxEAPwDWyaFA41Rw1UAGtlpkSJYllrSbapvEiQXQQ94bdb7qq0RFTKLRERCF0GUyuBLsMxrWNMct+SJck+wDtwsXmmVwPEOOgsbDiMcO5TTrBN6b1N/vhJTmXD+MyDMHOZEY2ncoXB9N7mv7hWGYJ6zHwxhcIHCCHVc86ddLabe9eLUXPoMHdG7oHvBz5O6I+wOk91taMY1raY4HdV//2Q==",
+          "url": "",
+          "fecha": "2026-10-06",
+          "estado": "Y"
+        },
+          {
+          "line_id": 2,
+          "nombre_archivo": "evidencia2.jpg",
+          "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAfElEQVR42mNkCLjDQEvAxEBjQHMLWOCsOxtUCKpWIT08h34QjVowasGoBXSwgJHWxTULhfr/tyOKSMbKO9T0AbLRKCaiWsNEXdMxpZioazqmgsGXTAk6H03ZaE6mvgVYcxMeZYMyiAh6AlkBmT7AYweaFKWlKQ0Lu8GSTAFRxSQc5wPJuQAAAABJRU5ErkJggg==",
+          "url": "",
+          "fecha": "2026-10-06",
+          "estado": "Y"
+        }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

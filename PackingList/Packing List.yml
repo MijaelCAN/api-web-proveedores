@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}Documentos/PackinList?FechaInicio=20260831&FechaFin=20261030&CodCita=77"
+  url: "{{baseUrl}}Documentos/PackinList?FechaInicio=20260831&FechaFin=20261030&CodCita=83"
   params:
     - name: FechaInicio
       value: "20260831"
@@ -14,7 +14,7 @@ http:
       value: "20261030"
       type: query
     - name: CodCita
-      value: "77"
+      value: "83"
       type: query
   auth: inherit
 

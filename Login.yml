@@ -11,8 +11,8 @@ http:
     data: |-
       {
           "role_type": "provider",
-          "usuario": "20100004322",
-          "password": "Nogasa2026*"
+          "usuario": "20100811228",
+          "password": "20100811228"
       }
   auth: inherit
 
@@ -21,3 +21,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

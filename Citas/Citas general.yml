@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}Proveedores/CitasProveedor?FechaInicio=20260928&FechaFin=20261004"
+  url: "{{baseUrl}}Proveedores/CitasProveedor?FechaInicio=20261001&FechaFin=20261031"
   params:
     - name: FechaInicio
-      value: "20260928"
+      value: "20261001"
       type: query
     - name: FechaFin
-      value: "20261004"
+      value: "20261031"
       type: query
   auth: inherit
 

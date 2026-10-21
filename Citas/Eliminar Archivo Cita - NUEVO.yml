@@ -1,0 +1,27 @@
+info:
+  name: Eliminar Archivo Cita - NUEVO
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}PackingList/Archivos/Eliminar?DocEntry=5"
+  params:
+    - name: DocEntry
+      value: "5"
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "usuario":"70131373",
+        "motivo":"Registro de prueba, eliminacion de archivos"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

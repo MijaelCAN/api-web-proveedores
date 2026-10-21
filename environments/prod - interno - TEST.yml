@@ -1,0 +1,8 @@
+name: prod - interno - TEST
+variables:
+  - name: baseUrl
+    value: http://192.168.254.27:8046/test/api/
+    description: ""
+  - name: num_cita
+    value: "13"
+    description: ""

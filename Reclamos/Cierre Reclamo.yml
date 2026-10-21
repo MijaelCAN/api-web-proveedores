@@ -1,0 +1,27 @@
+info:
+  name: Cierre Reclamo
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}Reclamos/8/Cierre"
+  body:
+    type: json
+    data: |-
+      {
+        "cierre": {
+          "acciones_efectivas": "SI",
+          "fecha_cierre": "2026-10-13T08:14:00-05:00",
+          "responsable_cierre": "EdithChumbile",
+          "observacion": "Proveedor repuso el producto CONFROME"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

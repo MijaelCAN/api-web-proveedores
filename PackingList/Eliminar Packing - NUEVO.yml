@@ -1,0 +1,26 @@
+info:
+  name: Eliminar Packing - NUEVO
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}Documentos/PackinList/Eliminar"
+  body:
+    type: json
+    data: |-
+      {
+        "id": "123",
+        "number": "PL-0001",
+        "cod_cita": "567",
+        "usuario": "U001",
+        "motivo": "Se registraron cantidades equivocadas"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

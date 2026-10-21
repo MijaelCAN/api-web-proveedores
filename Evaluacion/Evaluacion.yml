@@ -1,7 +1,7 @@
 info:
-  name: Calificar Evaluacion
+  name: Evaluacion
   type: http
-  seq: 3
+  seq: 1
 
 http:
   method: POST
